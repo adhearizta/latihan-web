@@ -1,0 +1,20 @@
+from django.shortcuts import render
+from django.http import HttpResponse
+
+# Create your views here.
+
+
+def landing_page(request):
+    return HttpResponse("hello, world")
+
+
+def second_page(request):
+    return HttpResponse("halaman kedua")
+
+
+def profile(request):
+    return HttpResponse("profile q")
+
+
+def example(request):
+    return render(request, 'example.html')
