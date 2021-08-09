@@ -1,19 +1,29 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+
 # Create your views here.
 
 
 def landing_page(request):
-    return HttpResponse("hello, world")
+    return HttpResponse("annyeong ini nuri")
 
 
 def second_page(request):
-    return HttpResponse("halaman kedua")
+    return HttpResponse("SecondPage")
 
 
 def profile(request):
-    return HttpResponse("profile q")
+    return HttpResponse('My Profile')
+
+
+def count(request, angka):
+    angka = angka+1
+    return HttpResponse(str(angka))
+
+
+def sapa(request, nama):
+    return HttpResponse("halo "+nama)
 
 
 def example(request):
