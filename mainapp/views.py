@@ -28,3 +28,7 @@ def sapa(request, nama):
 
 def example(request):
     return render(request, 'example.html')
+
+
+def shop(request):
+    return render(request, 'shop.html')
