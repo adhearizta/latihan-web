@@ -1,33 +1,28 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
 
-<head>
-    <title>hai aku dhea</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/style.css %}">
-</head>
-
-<body>
-    smlekum
-
-    <h1>siapa dhea</h1>
-    <h2>apakah ini dhea</h2>
-    <p>hah gimana</p>
-    <button>abis makan kue kukus</button>
-
-    <div style="background-color: red; padding: 10px; margin-top: 20px; text-align: left;">
-        <div style="background-color: aqua; margin: 10px; padding: 10px; text-align: center;">
-            <span>kue kukus enak</span>
+{% block content %}
+<div class="row">
+    <div class="col">
+        <div class="container d-flex justify-content-center">
+            <div class="card p-3 bg-primary text-red">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="{% static 'images/Screenshot_20210311-134751_Instagram.png' %}" width="100px">
+                    </div>
+                    <div class="col-md-6 mt-1">
+                        <div class="row">
+                            <h1>sewa suami </h1>
+                            <p>multitalent, ganteng, tidak pemalas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <a class=" btn btn-outline-dark">sewa sekarang juga</a>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="outer-box">
-        <div id="inner-box">
-            <span>gimana gimana</span>
-        </div>
-    </div>
-
-</body>
-
-</html>
+</div>
+</div>
+{% endblock content %}
