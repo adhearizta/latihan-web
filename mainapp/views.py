@@ -6,7 +6,7 @@ from django.http import HttpResponse
 
 
 def landing_page(request):
-    return HttpResponse("annyeong ini nuri")
+    return HttpResponse("INI BUKAN NURI INI DHEa asli")
 
 
 def second_page(request):
