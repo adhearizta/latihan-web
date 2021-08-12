@@ -31,3 +31,15 @@ def example(request):
 
 def shop(request):
     return render(request, 'shop.html')
+
+
+def firstpage(request):
+    return render(request, "firstpage.html")
+
+
+def secondpage(request):
+    return render(request, "secondpage.html")
+
+
+def home(request):
+    return render(request, "home.html")
