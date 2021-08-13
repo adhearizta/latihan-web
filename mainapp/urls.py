@@ -8,4 +8,5 @@ urlpatterns = [
     path('secondpage/', views.secondpage),
     path('firstpage/', views.firstpage),
     path('home/', views.home),
+    path('shopsuamilist/', views.shopsuamilist),
 ]

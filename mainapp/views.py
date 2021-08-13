@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 
 # Create your views here.
 
@@ -43,3 +44,17 @@ def secondpage(request):
 
 def home(request):
     return render(request, "home.html")
+
+
+def shopsuamilist(request):
+    # try:
+    print(request.GET)
+    category_suami = Category.objects.get(pk=1)
+    product_bermasalah = Product.objects.filter(category=category_suami).filter(
+        name__contains=request.GET['product_name'])
+    if(product_bermasalah.count() != 0):
+        return render(request, 'shopsuamilist.html', {'product_list': product_bermasalah, "available": True})
+    else:
+        return render(request, 'shopsuamilist.html', {'available': False})
+    # except:
+    return HttpResponse("kasian error :(")
